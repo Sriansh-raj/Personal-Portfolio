@@ -1,5 +1,5 @@
-## Personal Portfolio
-### Feel free to use it as a template and suggest costumisations :)
+## My Personal Portfolio ✨
+### Feel free to use it as a template and suggest customization :)
 
 Built with HTML, Flexbox (and soon to be a bit of JS)
 
