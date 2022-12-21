@@ -14,7 +14,7 @@ html {
 
 /*NAVBAR*/
 .navbar {
-    background-color: #31b0d5;
+    background-color: #049cca;
     position: fixed;
     /* Set the navbar to fixed position */
     top: 0;
@@ -25,11 +25,25 @@ html {
     justify-content: center;
 }
 
+ul li {
+    display: inline;
+    /*displaying list items as inline*/
+    list-style-type: none;
+    /*removing bullets on list items*/
+}
+
 .navbar a {
     font-weight: 200;
-    color: white;
+    color: #fff;
     padding: 14px 16px;
     text-decoration: none;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+div.navbar ul li a:hover {
+    opacity: 0.5;
+    transition: .5s;
 }
 
 .anchor {
@@ -45,7 +59,7 @@ html {
     /*height to 100% of view height*/
     background: #31b0d5;
     /*background color to blue*/
-    margin-bottom: 0;
+    margin-bottom: 10px;
     /*no bottom margin*/
 
     display: flex;
@@ -55,10 +69,16 @@ html {
 .jumbotron-text {
     /*TAGLINE UNDER NAME*/
     font-weight: 400;
-    font-size: 2em;
+    font-size: 2.6vw;
     color: white;
     text-align: center;
     padding-top: 150px;
+}
+
+@media (max-width:700px) {
+    .jumbotron {
+        height: 80vh;
+    }
 }
 
 .jumbotron-text h1 {
@@ -71,6 +91,7 @@ html {
 
 .jumbotron-text p {
     margin: 0;
+    margin-bottom: 10px;
 }
 
 /*SOCIAL LINKS*/
@@ -82,6 +103,11 @@ html {
 .li-social-links {
     display: inline-block;
     list-style: none;
+    transition: transform 90ms ease-in-out;
+}
+
+.li-social-links:hover {
+    transform: scale(1.2);
 }
 
 .social {
@@ -91,19 +117,14 @@ html {
 }
 
 /*ARROW LINK*/
-#down-arrow {
-    margin-top: auto;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-#down-arrow a {
-    color: white;
-}
-
 .arrow {
     text-align: center;
     margin: 8% 0;
+}
+
+.fa-arrow-down::before {
+    color: white;
+    content: "\\fo63";
 }
 
 .bounce {
@@ -193,6 +214,7 @@ h2 {
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
     margin-bottom: 30px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
@@ -221,12 +243,21 @@ h4 {
 /*PROJECTS*/
 .project-card {
     display: flex;
+    height: 300px;
     flex-direction: row;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: 5px;
     margin-bottom: 30px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.project-card a {
+    text-decoration: none;
+    background-color: #31b0d5;
+    width: fit-content;
+    padding: 5px 15px;
+    color: white;
 }
 
 .project-image {
@@ -288,6 +319,12 @@ h4 {
     color: #fff;
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: lightblue;
+    font-family: sans-serif;
 }
 
 .contact textarea {
