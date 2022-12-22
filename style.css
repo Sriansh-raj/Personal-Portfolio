@@ -69,7 +69,7 @@ div.navbar ul li a:hover {
 .jumbotron-text {
     /*TAGLINE UNDER NAME*/
     font-weight: 400;
-    font-size: 2.6vw;
+    /* font-size: 2.6vw; */
     color: white;
     text-align: center;
     padding-top: 150px;
@@ -83,19 +83,29 @@ div.navbar ul li a:hover {
 
 .jumbotron-text h1 {
     /*YOUR NAME*/
-    text-transform: capitalize;
-    font-weight: 800;
-    font-size: 3em;
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    padding-top: 80px;
     margin-bottom: 0;
+    letter-spacing: 9px;
+    display: block;
+    font-size: 1.9em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 .jumbotron-text p {
     margin: 0;
+    font-size: 1.1em;
     margin-bottom: 10px;
 }
 
 /*SOCIAL LINKS*/
 .ul-social {
+    padding-top: 50px;
     text-align: center;
     padding-left: 0;
 }
@@ -105,6 +115,26 @@ div.navbar ul li a:hover {
     list-style: none;
     transition: transform 90ms ease-in-out;
 }
+
+#glow {
+    color: #ffffff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #00c3ff, 0 0 30px #00c3ff, 0 0 40px #00c3ff,
+            0 0 50px #00c3ff, 0 0 60px #00c3ff, 0 0 70px #00c3ff;
+    }
+
+    to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #00c3ff, 0 0 40px #00c3ff, 0 0 50px #00c3ff,
+            0 0 60px #00c3ff, 0 0 70px #00c3ff, 0 0 80px #00c3ff;
+    }
+}
+
 
 .li-social-links:hover {
     transform: scale(1.2);
@@ -204,6 +234,32 @@ h2 {
 .content-body {
     line-height: 1.5;
     color: rgba(0, 0, 0, .75);
+}
+
+#aboutt p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3em;
+    line-height: 26px;
+    font-weight: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+#kiit {
+    text-align: center;
+    font-size: 150%;
+    line-height: 2;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+::selection {
+    background: rgba(0, 0, 0, .75);
+    color: #FFF;
 }
 
 /*EDUCATION*/
@@ -348,4 +404,15 @@ h4 {
 
 .white-text {
     color: white;
+}
+
+#copyright p {
+    text-align: center;
+    font-size: small;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    overflow-wrap: break-word;
 }
