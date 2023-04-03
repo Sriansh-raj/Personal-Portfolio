@@ -94,7 +94,7 @@ There are 8 customizable sections:
 
 ##### To do
 - [ ] Make responsive
-- [ ] Scroll to top button
+- [x] Scroll to top button
 - [ ] Other effects?
 
 
