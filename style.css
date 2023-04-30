@@ -1,6 +1,7 @@
 body {
   font-family: "Raleway", sans-serif;
-  background: rgba(242, 242, 242, 0.6);
+  background-image: url("bg_default_wood.jpg");
+  background-repeat: repeat;
   margin: 0;
 }
 
@@ -12,29 +13,24 @@ html {
   box-sizing: border-box;
 }
 
-/*NAVBAR*/
 .navbar {
-  background-color: #049cca;
+  background-color: #392215;
   position: fixed;
-  /* Set the navbar to fixed position */
   top: 0;
-  /* Position the navbar at the top of the page */
   width: 100%;
-  /* Full width */
   display: flex;
   justify-content: center;
 }
 
 ul li {
   display: inline;
-  /*displaying list items as inline*/
   list-style-type: none;
   /*removing bullets on list items*/
 }
 
 .navbar a {
   font-weight: 200;
-  color: #fff;
+  color: #f49a33;
   padding: 14px 16px;
   text-decoration: none;
   transition: all 0.3s;
@@ -57,11 +53,7 @@ div.navbar ul li a:hover {
 .jumbotron {
   height: 100vh;
   /*height to 100% of view height*/
-  background: #31b0d5;
-  /*background color to blue*/
   margin-bottom: 10px;
-  /*no bottom margin*/
-
   display: flex;
   flex-direction: column;
 }
@@ -82,7 +74,7 @@ div.navbar ul li a:hover {
 }
 
 .jumbotron-text h1 {
-  /*YOUR NAME*/
+  /*NAME*/
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
   font-weight: 100;
@@ -125,13 +117,13 @@ div.navbar ul li a:hover {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #eeeeee, 0 0 20px #00c3ff, 0 0 30px #00c3ff,
-      0 0 40px #00c3ff, 0 0 50px #00c3ff, 0 0 60px #00c3ff, 0 0 70px #00c3ff;
+    text-shadow: 0 0 10px #eeeeee, 0 0 20px #392215, 0 0 30px #392215,
+      0 0 40px #392215, 0 0 50px #392215, 0 0 60px #392215, 0 0 70px #392215;
   }
 
   to {
-    text-shadow: 0 0 20px #eeeeee, 0 0 30px #00c3ff, 0 0 40px #00c3ff,
-      0 0 50px #00c3ff, 0 0 60px #00c3ff, 0 0 70px #00c3ff, 0 0 80px #00c3ff;
+    text-shadow: 0 0 20px #eeeeee, 0 0 30px #392215, 0 0 40px #392215,
+      0 0 50px #392215, 0 0 60px #392215, 0 0 70px #392215, 0 0 80px #392215;
   }
 }
 
@@ -163,6 +155,7 @@ div.navbar ul li a:hover {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -182,17 +175,12 @@ div.navbar ul li a:hover {
 
 /*CONTENT*/
 .container {
-  /*sets up flexbox*/
   display: flex;
   flex-direction: column;
 }
 
 .row {
   display: flex;
-}
-
-.white {
-  background: white;
 }
 
 .side-content {
@@ -222,9 +210,9 @@ div.navbar ul li a:hover {
 }
 
 h2 {
-  font-weight: 200;
+  font-weight: 250;
   font-size: 2rem;
-  color: #31b0d5;
+  color: #ff9b05;
   text-transform: uppercase;
   text-align: center;
 }
@@ -239,6 +227,7 @@ h2 {
   font-size: 1.3em;
   line-height: 26px;
   font-weight: normal;
+  color: white;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -264,19 +253,18 @@ h2 {
 .card {
   display: flex;
   flex-direction: column;
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 1.563em;
+  border: 0.625em solid #1a0b02;
+  background-color: #e4d2b8;
   margin-bottom: 30px;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 30px #000000;
 }
 
 .card-header {
   padding: 0.75rem 1.25rem;
-  background-color: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 1.1em;
+  border-top-right-radius: 1.1em;
+  /* background-color: #dec7a3; */
 }
 
 .card-content {
@@ -287,7 +275,11 @@ h2 {
 h4 {
   margin: 0;
   font-weight: 400;
-  color: grey;
+  color: #1a0b02;
+}
+
+#hr_line {
+  border: 1px solid #1a0b02;
 }
 
 .job-title {
@@ -344,15 +336,15 @@ h4 {
   margin: 7px;
   padding: 5px 10px;
   color: white;
-  background: #31b0d5;
   list-style: none;
   cursor: default;
   font-size: 1.2em;
+  box-shadow: inset 0 0 7px black;
+  border-radius: 0.5em;
 }
 
 /*CONTACT*/
 .blue {
-  background: #31b0d5;
   text-align: center;
 }
 
@@ -370,15 +362,13 @@ h4 {
   border: none;
   margin-bottom: 10px;
   background: rgba(245, 245, 245, 0.126);
-  /* background: #31b0d5; */
-  color: #fff;
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }
 
 .contact input::placeholder,
 .contact textarea::placeholder {
-  color: lightblue;
+  color: rgb(59, 25, 0);
   font-family: sans-serif;
 }
 
@@ -390,19 +380,14 @@ h4 {
 .contact button {
   display: block;
   width: 100%;
-  background: #fff;
   border-radius: 4px;
   padding: 5px 10px;
   border: none;
-  color: #31b0d5;
+  color: #ff9b05;
   font-weight: 700;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
-}
-
-.white-text {
-  color: white;
 }
 
 #copyright p {
@@ -414,22 +399,25 @@ h4 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   overflow-wrap: break-word;
+  color: white;
 }
-#myBtn {
-  /* Hidden by default */
+
+#back_to_top {
+  /* TODO: Hide on front page */
   position: fixed;
   bottom: 20px;
   right: 30px;
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #049cca;
+  background-color: #392215;
   color: white;
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;
   font-size: 12px;
 }
-#myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+
+#back_to_top:hover {
+  background-color: #555;
 }
